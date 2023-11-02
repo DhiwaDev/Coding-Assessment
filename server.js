@@ -206,9 +206,8 @@ app.get("/api/runCodeJava", async (req, res) => {
   try {
     // Make the JDoodle Compiler API call
     const response = await axios.post("https://api.jdoodle.com/v1/execute", {
-      clientId: "bd03006ffe3102ad691b556ab5adc348",
-      clientSecret:
-        "a80cfb1edd512be0079872d14a36044a6d24753b2fd3a2dfc3d0bf89ac9d8087",
+      clientId: "",
+      clientSecret: "",
       script: code,
       language: language, // Change the language according to your needs
       versionIndex: 3,
