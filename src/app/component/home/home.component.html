@@ -1,0 +1,31 @@
+<div class="container">
+  <h1 class="welcome-heading">Welcome <span class="name">{{ name }}</span></h1>
+
+  <div class="header-1">
+    <h1><span>Skills</span> speak louder than Words</h1>
+    <p class="lead">Sharpen your coding skills and<br>prepare for technical interviews.</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h2 class="card-title">Practice</h2>
+          <p class="card-text">Choose from a wide range of coding challenges to improve your skills and prepare for
+            technical interviews.</p>
+          <a [routerLink]="['/challenges']" class="btn btn-primary btn-custom">Start Practicing</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h2 class="card-title">Contests</h2>
+          <p class="card-text">Join coding contests and compete against other programmers to prove your skills and win
+            prizes.</p>
+          <a [routerLink]="['/contestdetails']" class="btn btn-primary btn-custom">View Contests</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

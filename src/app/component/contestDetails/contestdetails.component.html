@@ -1,0 +1,25 @@
+<!-- <p>contestdetails works!</p> -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>CONTESTS</h1>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card-deck">
+        <div class="card mb-4" *ngFor="let contestDet of contestdetails">
+          <div class="card-body">
+            <h3 class="card-title">{{ contestDet.title }}</h3>
+            <p class="card-text">{{ contestDet.description }}</p>
+            <a [routerLink]="['/contestdetails','contestlist',contestDet.id]" class="start-contest-link">View Contest</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

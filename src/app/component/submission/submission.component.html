@@ -1,0 +1,38 @@
+
+<div class="container">
+  <h1>Code Submissions</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Serial No</th>
+        <th>Language</th>
+        <th>View Code</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let submission of submissions">
+        <td>{{ submission.id }}</td>
+        <td>{{ submission.language }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="openCodeModal(submission.code)">View</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Code Modal -->
+<div class="modal-overlay" [ngClass]="{ 'show': isModalOpen }">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Code View</h5>
+        <button type="button" class="close" (click)="closeCodeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <pre><code>{{ codeView }}</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+

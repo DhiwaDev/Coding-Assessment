@@ -1,0 +1,20 @@
+<!-- <p>signup works!</p> -->
+<div class="container">
+  <h1>Welcome to the <span>Online Coding Platform</span></h1>
+  <h2>SIGNUP</h2>
+  <hr>
+  <div class="tabs">
+    <button (click)="showRegisterForm()" [class.active]="activeTab === 'register'">REGISTER</button>
+    <button (click)="showLoginForm()" [class.active]="activeTab === 'login'">LOGIN</button>
+  </div>
+  <div class="forms">
+    <div class="form-container" *ngIf="activeTab === 'register'">
+      <h3>CREATE AN ACCOUNT</h3>
+      <app-register (registrationComplete)="redirectToLogin()"></app-register>
+    </div>
+    <div class="form-container" *ngIf="activeTab === 'login'">
+      <h3>SIGN IN</h3>
+      <app-login></app-login>
+    </div>
+  </div>
+</div>

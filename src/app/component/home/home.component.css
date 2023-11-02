@@ -1,0 +1,97 @@
+.container {
+  margin-top: -53%;
+  margin-left: 25.5%;
+  margin-right: 15%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+}
+
+.welcome-heading {
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.name {
+  color: rgb(247, 101, 4);
+}
+
+.card-title {
+  font-size: 24px;
+  color: #003B73;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.btn-custom {
+  text-decoration: none;
+  background-color: #60A3D9;
+  /* border-color: #007bff; */
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+  background-color: #050a30ca;
+}
+
+.card {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.header-1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.header-1 h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #4381c3;
+}
+
+.header-1 h1 span {
+  color: #000;
+  background-color: #007bff30;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.header-1 p.lead {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #333;
+}
+
+
+@media screen and (max-width: 767px) {
+  .container {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .header-1 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .card {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

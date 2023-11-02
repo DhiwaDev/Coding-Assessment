@@ -1,0 +1,60 @@
+<div class="container">
+
+  <div class="row-1">
+    <div class="col-md-4">
+      <h3><a routerLink="/discussion">Discussion</a></h3>
+      <!-- Add content for discussion section -->
+    </div>
+    <div class="col-md-4">
+      <h3><a routerLink="/leaderboard">Leaderboard</a></h3>
+      <!-- Add content for leaderboard section -->
+    </div>
+    <div class="col-md-4">
+      <h3><a routerLink="/submission">Submission</a></h3>
+      <!-- Add content for submission section -->
+    </div>
+  </div>
+
+  <div class="card-component">
+    <div class="edit">
+      <div class="form-group">
+        <label for="language">Select Language</label>
+        <select class="form-control" id="language">
+          <option value="java">JAVA</option>
+          <option value="cpp">C++</option>
+          <option value="c">C</option>
+        </select>
+      </div>
+      <div class="editor" id="questionEditor" style="height: 400px; width: 95%;"></div>
+    </div>
+    <div class="row">
+      <!-- <app-ide></app-ide> -->
+      <div class="col-md-12">
+        <div class="card-deck">
+          <div class="card mb-4" *ngFor="let questionDesc of question_description">
+            <div class="card-body">
+              <p class="card-text">{{ questionDesc.description }}</p>
+              <h3> Testcases </h3>
+              <h4>Input</h4>
+              <p class="card-text">{{ questionDesc.input }}</p>
+              <h4>Output</h4>
+              <p class="card-text">{{ questionDesc.expected_output }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="output">
+      <div class="col-md-6">
+        <h4>Output</h4>
+        <textarea name="output" id="output" cols="30" rows="4">{{output}}</textarea>
+        <!-- <div id="output"></div> -->
+        <button class="btn btn-primary" (click)="runCode()">Compile</button>
+        <div *ngIf="loading" class="loading-spinner">
+          <div class="spinner"></div>
+          <p>Compiling...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
